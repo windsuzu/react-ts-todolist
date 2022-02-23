@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { FormEvent } from "react";
 import styled from "styled-components";
+import Button from "../ui/Button";
 import Input from "../ui/Input";
 
 const Form = styled.form`
@@ -27,22 +28,6 @@ const Form = styled.form`
         border-bottom-left-radius: 0;
         margin-bottom: 0.5rem;
     }
-
-    button {
-        font: inherit;
-        background-color: #ebb002;
-        border: 1px solid #ebb002;
-        color: #201d0f;
-        padding: 0.5rem 1.5rem;
-        border-radius: 4px;
-        cursor: pointer;
-
-        &:hover,
-        &:active {
-            background-color: #ebc002;
-            border-color: #ebc002;
-        }
-    }
 `;
 
 type newTodoProps = {
@@ -66,7 +51,7 @@ const NewTodo = (props: newTodoProps) => {
     return (
         <Form onSubmit={submitHandler}>
             <Input id="text" label="Todo Text" type="text" ref={todoInputRef} />
-            <button>Add Todo</button>
+            <Button>Add Todo</Button>
         </Form>
     );
 };
