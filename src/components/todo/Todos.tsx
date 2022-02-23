@@ -11,13 +11,18 @@ const TodoList = styled.ul`
 
 type TodoProps = {
     items: Todo[];
+    onRemoveTodo: (id: string) => void;
 };
 
 const Todos = (props: TodoProps) => {
     return (
         <TodoList>
             {props.items.map((item) => (
-                <TodoItem key={item.id} text={item.text} />
+                <TodoItem
+                    key={item.id}
+                    text={item.text}
+                    onRemoveTodo={props.onRemoveTodo.bind(null, item.id)}
+                />
             ))}
         </TodoList>
     );
