@@ -40,7 +40,9 @@
 
 * [About](#about)
 * [Examples](#examples)
-* [Preview](#preview)
+  * [Components, Props, Children](#components-props-children)
+  * [React Hooks](#react-hooks)
+  * [Custom Hooks](#custom-hooks)
 * [License](#license)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
@@ -56,13 +58,13 @@
 <tr>
 <td>
 
-這個專案主要示範如何使用 TypeScript。內容包括開發 react.js 及 redux，內容包括:
+這個專案主要示範如何使用 TypeScript 開發簡單的 react.js 專案:
 
 1. Creating a React + TypeScript Project
    * [`npx create-react-app app_name --template typescript`](https://create-react-app.dev/docs/adding-typescript/)
-2. TypeScript + React Components (`props`, `children`, etc)
-3. TypeScript + React Hooks (`useState`, `useRef`, `useEffect`, etc)
-4. TypeScript + State Management (`useContext` / `Redux`)
+2. TypeScript + React Components (`props`, `children`, `forwardRef`)
+3. TypeScript + React Hooks (`useState`, `useReducer`, `useRef`, `useEffect`, `useCallback`)
+4. TypeScript + Custom Hooks (`useHttp`)
 5. TypeScript + styled-components
 
 **Built With**
@@ -71,7 +73,6 @@
 * TypeScript
 * React.js
 * styled-components
-* redux, @reduxjs/toolkit, react-redux
 
 **DEMO**
 
@@ -85,19 +86,23 @@
 
 ## Examples
 
+### Components, Props, Children
 
+* [props](https://github.com/windsuzu/react-ts-todolist/blob/main/src/components/todo/Todos.tsx#L12-L17)
+* [children (ReactNode)](https://github.com/windsuzu/react-ts-todolist/blob/main/src/components/ui/Button.tsx#L20-L26)
+* [forwardRef](https://github.com/windsuzu/react-ts-todolist/blob/main/src/components/ui/Input.tsx#L3-L16)
 
-## Preview
+### React Hooks
 
+* [useState](https://github.com/windsuzu/react-ts-todolist/blob/main/src/hooks/use-http.ts#L13-L14)
+* [useReducer](https://github.com/windsuzu/react-ts-todolist/blob/main/src/App.tsx#L7-L48)
+* [useEffect](https://github.com/windsuzu/react-ts-todolist/blob/main/src/App.tsx#L72)
+* [useRef](https://github.com/windsuzu/react-ts-todolist/blob/main/src/components/todo/NewTodo.tsx#L38)
+* [useCallback](https://github.com/windsuzu/react-ts-todolist/blob/main/src/hooks/use-http.ts#L16)
 
-<p align="center">
-  <!-- <img src="images/screenshots/web-1.png" width=68%>
-  <img src="images/screenshots/phone-1.png" width=22%>
-  <img src="images/screenshots/web-2.png" width=68%>
-  <img src="images/screenshots/phone-2.png" width=22%>
-  <img src="images/screenshots/web-3.png" width=68%>
-  <img src="images/screenshots/phone-3.png" width=22%> -->
-</p>
+### Custom Hooks
+
+* [useHttp](https://github.com/windsuzu/react-ts-todolist/blob/main/src/hooks/use-http.ts#L1-L49)
 
 ---
 
